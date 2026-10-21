@@ -1,5 +1,5 @@
 #STAGE 1 : BUILDING
-FROM maven:3.14.0-amazoncorretto-26 AS Build
+FROM maven:3.10.0-amazoncorretto-25 AS Build
 LABEL authors="BassDX"
 WORKDIR /app
 
@@ -11,7 +11,7 @@ RUN mvn clean package -DskipTests
 
 #STAGE 2 : RUNTIME
 
-FROM amazoncorretto:26
+FROM amazoncorretto:25
 WORKDIR /app
 
 #Copy the JAR file
