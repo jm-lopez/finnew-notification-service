@@ -11,7 +11,7 @@ RUN mvn clean package -DskipTests
 
 #STAGE 2 : RUNTIME
 
-FROM amazoncorretto-25
+FROM amazoncorretto:25
 WORKDIR /app
 
 #Copy the JAR file
