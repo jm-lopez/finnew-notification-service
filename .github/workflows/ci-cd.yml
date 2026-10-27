@@ -33,7 +33,7 @@ jobs:
           host: ${{secrets.EC2_HOST}}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          scripts: |
+          script: |
             cd /home/ec2-user/projects/finnew-notification-service
             git pull origin main
             cd /home/ec2-user/projects
